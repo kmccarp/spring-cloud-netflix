@@ -29,6 +29,8 @@ import org.springframework.context.ApplicationEvent;
 @SuppressWarnings("serial")
 public class EurekaInstanceRenewedEvent extends ApplicationEvent {
 
+	private static final long serialVersionUID = 1;
+
 	private String appName;
 
 	private String serverId;
@@ -98,9 +100,7 @@ public class EurekaInstanceRenewedEvent extends ApplicationEvent {
 
 	@Override
 	public String toString() {
-		return new StringBuilder("EurekaInstanceRenewedEvent{").append("appName='").append(appName).append("', ")
-				.append("serverId='").append(serverId).append("', ").append("instanceInfo=").append(instanceInfo)
-				.append(", ").append("replication=").append(replication).append("}").toString();
+		return "EurekaInstanceRenewedEvent{" + "appName='" + appName + "', " + "serverId='" + serverId + "', " + "instanceInfo=" + instanceInfo + ", " + "replication=" + replication + "}";
 	}
 
 }
