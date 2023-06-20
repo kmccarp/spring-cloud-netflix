@@ -26,6 +26,8 @@ import org.springframework.context.ApplicationEvent;
 @SuppressWarnings("serial")
 public class EurekaServerStartedEvent extends ApplicationEvent {
 
+	private static final long serialVersionUID = 1;
+
 	/**
 	 * @param eurekaServerConfig {@link EurekaServerConfig} event source
 	 */

@@ -41,7 +41,7 @@ public class EurekaClientTest extends BaseCertTest {
 		service = startService(server, EurekaClientTest.TestApp.class);
 		assertThat(service.discoveryClientOptionalArgs()).isInstanceOf(RestTemplateDiscoveryClientOptionalArgs.class);
 		log.info("Successfully asserted that Jersey will be used");
-		waitForRegistration(() -> new EurekaClientTest().createEurekaClient());
+		waitForRegistration(new EurekaClientTest()::createEurekaClient);
 	}
 
 	@Override
