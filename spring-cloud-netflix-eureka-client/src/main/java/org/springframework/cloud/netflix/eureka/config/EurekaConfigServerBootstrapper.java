@@ -56,7 +56,7 @@ public class EurekaConfigServerBootstrapper implements BootstrapRegistryInitiali
 				&& binder.bind("spring.cloud.discovery.enabled", Boolean.class).orElse(true);
 	}
 
-	final static class EurekaFunction implements ConfigServerInstanceProvider.Function {
+	static final class EurekaFunction implements ConfigServerInstanceProvider.Function {
 
 		private final BootstrapContext context;
 
