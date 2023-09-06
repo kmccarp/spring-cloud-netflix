@@ -50,7 +50,7 @@ public class RestTemplateEurekaClientTest extends BaseCertTest {
 		// Will use RestTemplate
 		assertThat(service.discoveryClientOptionalArgs()).isInstanceOf(RestTemplateDiscoveryClientOptionalArgs.class);
 		log.info("Successfully asserted that RestTemplate will be used");
-		waitForRegistration(() -> new RestTemplateEurekaClientTest().createEurekaClient());
+		waitForRegistration(new RestTemplateEurekaClientTest()::createEurekaClient);
 	}
 
 	@AfterAll
